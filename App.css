@@ -1,0 +1,65 @@
+.nunito-sans {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+:root {
+  --Dark-Blue: #2b3945;
+  --Very-Dark-Blue: #202c37;
+  --Very-Dark-Blue-Text: #111517;
+  --Dark-Gray: #858585;
+ --Very-Light-Gray : #fafafa; 
+ --White: #ffffff;
+
+   --body_background : var(--Very-Light-Gray);
+   --text-color: var(--Dark-Blue);
+   --input-background : var(--White);
+   --header-background : var(--White);
+
+}
+/* - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%) */
+
+[data-theme = 'dark'] {
+  --body_background: var(--Very-Dark-Blue);
+  --text-color: var(--White);
+  --input-background: var(--Dark-Blue);
+  --header-background : var(--Dark-Blue);
+
+}
+
+* {
+  transition : all 0.2s ease-in-out;
+}
+
+body{
+  background-color: var(--body_background);
+  color: var(--text-color);
+}
+
+
+.box-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: fit-content;
+  gap: 10px;
+   .box {
+      background: gray;
+      width: 200px;
+      height: 200px;
+   }
+   .no-background{
+    background-color: white;
+   }
+   .selected{
+    background-color: green;
+   }
+}
